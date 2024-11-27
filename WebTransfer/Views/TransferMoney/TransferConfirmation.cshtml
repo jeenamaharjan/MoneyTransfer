@@ -1,0 +1,7 @@
+﻿@model WebTransfer.Models.TransferMoneyModel
+
+<h2>Transfer Confirmation</h2>
+
+<p>You successfully transferred <strong>@Model.Amount</strong> @Model.FromCurrency.</p>
+<p>The equivalent amount in <strong>@Model.ToCurrency</strong> is <strong>@Model.ConvertedAmount</strong>.</p>
+<p>Transaction Date: <strong>@Model.TransactionDate.ToString("g")</strong></p>

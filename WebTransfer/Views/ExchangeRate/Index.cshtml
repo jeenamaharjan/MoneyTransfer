@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Exchange Rate";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h3>Current Exchange Rate</h3>
+    @if (ViewBag.ExchangeRate != null)
+    {
+        <p>The current exchange rate for MYR to NPR is: @ViewBag.ExchangeRate</p>
+    }
+    else
+    {
+        <p>Could not retrieve the exchange rate at the moment.</p>
+    }
+</div>

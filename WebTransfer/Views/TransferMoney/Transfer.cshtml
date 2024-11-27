@@ -1,0 +1,22 @@
+﻿@model WebTransfer.Models.TransferMoneyModel
+
+<form asp-controller="TransferMoney" asp-action="Transfer" method="post">
+    <div>
+        <label for="Amount">Amount:</label>
+        <input type="number" asp-for="Amount" id="Amount" required />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="FromCurrency">From Currency:</label>
+        <input type="text" asp-for="FromCurrency" id="FromCurrency" readonly />
+    </div>
+    <div>
+        <label for="ToCurrency">To Currency:</label>
+        <input type="text" asp-for="ToCurrency" id="ToCurrency" readonly />
+    </div>
+    <button type="submit">Submit Transfer</button>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
